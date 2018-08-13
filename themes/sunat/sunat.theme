@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * @file
+ * sunat.theme.
+ *
+ * Filename:     sunat.theme
+ * Description:  template
+ * Author:       hansgianfranco@gmail.com 
+ */
+
+/**
+ * The output variables.
+ */
+use \Drupal\Core\Form\FormStateInterface;
+
+function sunat_preprocess(&$variables) {
+  if(isset($_GET['search'])){
+      $variables['get']['search'] = $_GET['search'];
+  }
+  if(isset($_GET['department'])){
+      $variables['get']['department'] = $_GET['department'];
+  }
+  if(isset($_GET['city'])){
+      $variables['get']['city'] = $_GET['city'];
+  }
+  $variables['city'] = array(
+      1 => 'Lima',
+      2 => 'Abancay',
+      3 => 'Andahuaylas',
+      4 => 'Arequipa',
+      5 => 'Ayacucho'
+  );
+  $variables['intendence'] = array(
+        1 => 'Lima',
+        2 => 'Arequipa'
+    );
+}
+
+function sunat_preprocess_page(&$variables) {
+    global $base_url, $base_path;
+
+    $variables['logo'] = $base_path.drupal_get_path('theme','sunat').'/img/LogoSunatCharlas.svg';
+    $variables['logo_footer'] = $base_path.drupal_get_path('theme','sunat').'/img/LogoSunat.svg';
+    $variables['user'] = \Drupal::currentUser();
+}
+
+function sunat_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+    if ( $form_id == 'user_login_form') {
+        $form['name']['#attributes']['class'] = array('form-control');
+        $form['name']['#attributes']['placeholder'] = t( 'Usuario' );
+        $form['pass']['#attributes']['class'] = array('form-control');
+        $form['pass']['#attributes']['placeholder'] = t( 'Contraseña' );
+        $form['name']['#description'] = t('');
+        $form['pass']['#description'] = t('');
+        $form['actions']['submit'] = array('#type' => 'submit', '#value' => t('Iniciar sesión'));
+        $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-primary', 'btn-block');
+    }
+ }
+
+
+
+function sunat_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if ($hook == 'form' & !empty($variables['element']['#id'])) {
+    $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+  }
+}
+
+

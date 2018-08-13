@@ -1,0 +1,120 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if title %}
+    <h3>{{ title }}</h3>
+{% endif %}
+{% if get.search or get.department or get.city %}
+    <p class="light">
+        {% if get.department %}
+            <a href="javascript:void(0)" class="badge badge-light">{{ intendence[get.department] }}</a>
+        {% endif %}
+        {% if get.city %}
+            <a href="javascript:void(0)" class="badge badge-light">{{ city[get.city] }}</a>
+        {% endif %}
+    </p>
+    <div class="row">
+            <div class="col-sm-12">
+                <div class="container tarjeta">
+                    <div class="row">
+                        <div class="col">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-12 info">
+                                        <h2>{{ fields.title.content }} <span>{{ fields.field_intendence.content }}</span> <span>{{ fields.field_city.content }}</span></h2>
+                                        <p class="fecha">
+                                            <span class="dia">{{ fields.field_date.content }}</span>
+                                            <span class="mes">{{ fields.field_date_1.content }}</span>
+                                            <span class="anio">{{ fields.field_date_2.content }}</span>
+                                        </p>
+                                        {{ fields.field_description.content }}
+                                    </div>
+                                    <div class="col-sm-12 botonera">
+                                        {{ fields.view_node.content }}
+                                        {% if logged_in %}
+                                            {{ fields.link_flag.content }}
+                                        {% else %}
+                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#collapseLogin" aria-expanded="false" aria-controls="collapseLogin">Quiero asistir</button>
+                                        {% endif %}
+                                    </div>
+                                    <input type="hidden" id="node_id" value="{{ node.id }}">
+
+                                    <div class="col-12 inf">
+                                        <div class="container collapse" id="collapseLogin">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="text-center">Para asistir a una charla debes <a href="/user/login">iniciar sesión</a> si aun no te has registrado, <a href="/user/register">registrate aquí</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+{% else %}
+    <div class="row chat-front">
+                <div class="col-sm-12">
+                    <div class="container tarjeta">
+                        <div class="row">
+                            <div class="col">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-12 col-lg-7 info">
+                                            <h2>{{ fields.title.content }} <span>{{ fields.field_intendence.content }}</span> <span>{{ fields.field_city.content }}</span></h2>
+                                            <p class="fecha">
+                                                <span class="dia">{{ fields.field_date.content }}</span>
+                                                <span class="mes">{{ fields.field_date_1.content }}</span>
+                                                <span class="anio">{{ fields.field_date_2.content }}</span>
+                                            </p>
+                                            {{ fields.field_description.content }}
+                                        </div>
+                                        <div class="col-sm-12 botonera">
+                                            {{ fields.view_node.content }}
+                                            {% if logged_in %}
+                                                {{ fields.link_flag.content }}
+                                            {% else %}
+                                                <button type="button" class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#collapseLogin" aria-expanded="false" aria-controls="collapseLogin">Quiero asistir</button>
+                                            {% endif %}
+                                        </div>
+                                        <input type="hidden" id="node_id" value="{{ node.id }}">
+
+                                        <div class="col-12 inf">
+                                            <div class="container collapse" id="collapseLogin">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p class="text-center">Para asistir a una charla debes <a href="/user/login">iniciar sesión</a> si aun no te has registrado, <a href="/user/register">registrate aquí</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+{% endif %}
+
+
+

@@ -1,0 +1,42 @@
+<div class="login-block row justify-content-center align-items-center">
+    <div class="col-sm-12 col-md-4">
+        <div class="form login-form">
+            <h2>Inicia sesión</h2>
+            <form {{ attributes }}>
+                {{ element.messages }}
+                <fieldset>
+                    <div id="error_messages"></div>
+                    <div class="form-group">
+                        {{ element.name }}
+                    </div>
+                    <div class="form-group">
+                        {{ element.pass }}
+                    </div>
+                    <div class="form-group">
+                        {{ element.actions.submit }}
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input id="show_password" class="show_password form-check-input" type="checkbox" />
+                                <label class="password-toggle" for="show_password">Recuérdame</label>
+                            </div>
+                        </div>
+                        <div class="col-6 text-right form-check">
+                            <a href="{{ base_path }}user/password" class="forgot-password">Olvidé mi contraseña</a>
+                        </div>
+                    </div>
+                    {{ element.form_build_id }} {# required #}
+                    {{ element.form_id }} {# required #}
+                </fieldset>
+
+                <fieldset>
+                    <h3>Aún no tengo usuario</h3>
+                    <div class="form-group">
+                        <a href="{{ base_path }}user/register" class="btn btn-secondary btn-block">Quiero registrarme</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,132 @@
+<div class="signup-block row justify-content-center align-items-center">
+	<div class="col-sm-12">
+		<div class="form signup-form">
+			<h2>Regístrate en nuestro sitio para asistir al evento</h2>
+			<form {{ attributes }}>
+                {{ element.elements.messages }}
+				<fieldset>
+					<div class="container">
+						<input type="hidden" name="name" id="username">
+						<div class="row">
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="firstname">Nombres:</label>
+									<input type="text" class="form-control" id="firstname" name="field_firstname[0][value]" placeholder="Ingresa tu nombre" required>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="lastname">Apellidos:</label>
+									<input type="text" class="form-control" id="lastname" name="field_lastname[0][value]" placeholder="Ingresa tus apellidos" required>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="dni">DNI:</label>
+									<input type="text" class="form-control" id="dni" name="field_dni[0][value]" placeholder="Ingresa tu número de DNI" required>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="ruc">R.U.C.:</label>
+									<input type="text" class="form-control" id="ruc" name="field_ruc[0][value]" placeholder="Ingresa tu número de R.U.C.">
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="email">Correo electrónico:</label>
+									<input type="text" class="form-control" id="email" name="mail"  placeholder="Ingresa tu correo de contacto" required>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="phone">Teléfono / celular:</label>
+									<input type="text" class="form-control" id="phone" name="field_phone[0][value]" placeholder="Ingresa tu número de contacto" required>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="department">Departamento de residencia:</label>
+									<select class="form-control" id="department" name="field_department[0][value]" required>
+										<option value="">Selecciona</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="province">Provincia:</label>
+									<select class="form-control" id="province" name="field_province[0][value]" required>
+										<option value="">Selecciona</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="district">Distrito:</label>
+									<select class="form-control" id="district" name="field_district[0][value]" required>
+										<option value="">Selecciona</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row terminos">
+							<div class="col-12">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="term" required>
+									<label class="form-check-label" for="term">
+										Acepto los términos y condiciones
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="container">
+						<div class="row justify-content-center align-items-end">
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="password">Crea tu contraseña</label>
+									<input type="password" class="form-control" id="password" name="pass[pass1]" placeholder="crea tu contraseña" required>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+									<label for="repet_password">Repite tu contraseña</label>
+									<input type="password" class="form-control" id="repet_password" name="pass[pass2]" placeholder="repite tu contraseña creada" required>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="form-group">
+                                    {{ element.actions.submit }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+                {{ element.form_build_id }}
+                {{ element.form_id }}
+			</form>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    var fn = "";
+    var ln = "";
+    function userName(){
+        fn = $('#firstname').val().toLowerCase();
+        ln = $('#lastname').val().toLowerCase();
+        $('#username').val(fn+ln);
+        console.log(fn+ln);
+    }
+    $('#firstname').on('change', function () {
+        userName();
+    });
+    $('#lastname').on('change', function () {
+        userName();
+    });
+    $('#edit-submit').addClass('btn');
+    $('#edit-submit').addClass('btn-block');
+    $('#edit-submit').addClass('btn-secondary');
+</script>

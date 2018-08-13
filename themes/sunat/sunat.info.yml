@@ -1,0 +1,19 @@
+name: Sunat
+description: Drupal 8 Theme for Sunat Talks
+type: theme
+core: 8.x
+libraries:
+  - sunat/global-styling
+  - sunat/global-scripts
+  - sunat/fonts
+regions:
+  page_top: Page Top
+  page_bottom: Page Bottom
+  header: Header
+  slideshow: Slideshow
+  content: Content
+  help: Help
+  messages: Messages
+  featured: Featured
+  breadcrumb: Breadcrumb
+  footer: Footer

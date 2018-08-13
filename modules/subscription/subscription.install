@@ -1,0 +1,52 @@
+<?php
+
+function subscription_install(){
+    drupal_install_schema('subscription');
+}
+
+
+function subscription_uninstall() {
+    drupal_uninstall_schema('subscription');
+}
+
+
+function subscription_schema(){
+    $schema['subscription'] = array(
+        'description' => 'Suscription users for node chat',
+        'fields' => array(
+            'id'  => array(
+                'type' => 'int',
+                'not null' => TRUE,
+                'description' => 'Primary Key: subscription ID',
+            ),
+            'user_id'  => array(
+                'type' => 'int',
+                'not null' => TRUE,
+                'description' => 'User ID',
+            ),
+            'chat_id'  => array(
+                'type' => 'int',
+                'not null' => TRUE,
+                'description' => 'Chat ID',
+            ),
+            'status' => array(
+                'type' => 'int',
+                'not null' => TRUE,
+                'default' => 0,
+                'description' => 'State of subscription',
+            ),
+        ),
+        'primary key' => array('id'),
+        'foreign keys' => array(
+            'user_id' => array(
+                'table' => 'users',
+                'columns' => array('uid' => 'uid'),
+            ),
+            'chat_id' => array(
+                'table' => 'node',
+                'columns' => array('nid' => 'nid'),
+            )
+        )
+    );
+    return $schema;
+}

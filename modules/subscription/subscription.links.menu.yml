@@ -1,0 +1,6 @@
+subscription.admin:
+  title: 'Subscripciones'
+  description: 'Modulo de suscripciones'
+  parent: system.admin_config_development
+  route_name: subscription.content
+  weight: 100

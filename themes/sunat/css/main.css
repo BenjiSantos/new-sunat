@@ -1,0 +1,973 @@
+body {
+    background: #005CB9
+}
+
+input[type=text] {
+    background: #fff;
+    border-radius: 4px;
+    width: 100%;
+    height: 35px
+}
+
+.interfaz {
+    position: relative;
+    min-height: 100vh
+}
+
+.cabecera {
+    background: #fff
+}
+
+.cabecera h5 img {
+    width: 274px
+}
+
+.cabecera .dropdown-menu {
+    left: initial;
+    right: 0
+}
+
+.cabecera .navbar {
+    max-width: 1150px;
+    margin: 0 auto
+}
+
+.cabecera .navbar.bg-light {
+    background: #fff !important
+}
+
+.cabecera .navbar .navbar-brand img {
+    width: 274px
+}
+
+.cabecera .navbar .navbar-nav {
+    text-align: center
+}
+
+.cabecera .nav-link {
+    font-size: 13px
+}
+
+.cabecera .dropdown-item {
+    font-size: 14px
+}
+
+.hero-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    color: #fff;
+    min-height: 200px;
+    display: none
+}
+
+.titulo {
+    height: 80px;
+    padding: 0 5px
+}
+
+.titulo a {
+    font-size: 12px
+}
+
+.titulo a.text-dark {
+    color: #005CB9 !important
+}
+
+.search-wrap {
+    max-width: 1043px;
+    margin: 0 auto;
+    padding: 0px
+}
+
+.main-wrap {
+    background: rgba(255, 255, 255, 0.25);
+    max-width: 1043px;
+    margin: 0 auto;
+    padding: 40px 40px 10px 40px;
+    border-radius: 12px
+}
+
+.main-wrap > .container-full {
+    position: relative
+}
+
+.main-wrap>.container-full>.row .col-sm-12 {
+    padding-bottom: 8px;
+}
+
+.main-wrap > .container-full .row .col-sm-12 {
+    padding-bottom: 8px
+}
+
+.main-wrap > .container-full > .row .col-sm-12 .info h2 {
+    padding-left: 10px
+}
+
+.main-wrap > .container-full > .row .col-sm-12 .info p {
+    padding-left: 10px
+}
+
+.main-wrap h1.light {
+    position: absolute;
+    font-size: 26px;
+    top: -35px;
+    left: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: lighter
+}
+
+.main-wrap p.light {
+    color: #fff;
+    font-weight: lighter;
+    padding-left: 5px
+}
+
+.main-wrap p a.badge-light {
+    border: 2px solid #005cb9;
+    background: #fff;
+    color: #005cb9;
+    padding: 3px 25px 3px 15px;
+    border-radius: 15px;
+    position: relative
+}
+
+.main-wrap p a.badge-light:before {
+    content: "x";
+    font-size: 14px;
+    position: absolute;
+    color: #86B7EE;
+    right: 7px;
+    top: 1px;
+    font-weight: 600
+}
+
+.main-wrap.--buscador {
+    padding-top: 80px
+}
+
+.buscador {
+    border: 1px solid #ffffff;
+    background-color: #329CD8;
+    border-radius: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px
+}
+
+.buscador .container-full .no-gutters > div {
+    padding: 3px
+}
+
+.buscador input {
+    width: 100%;
+    height: 35px;
+    margin: 6px 0;
+    font-size: 13px;
+    border: 0;
+    border-radius: 4px
+}
+
+.buscador input[type=text] {
+    padding-left: 20px
+}
+
+.buscador input[type=button] {
+    background: #AD1738;
+    color: #ffffff
+}
+
+.buscador select {
+    width: 100%;
+    height: 35px;
+    font-size: 13px;
+    margin: 6px 0;
+    padding-left: 12px;
+    border: 0;
+    border-radius: 4px
+}
+
+.buscador button {
+    margin: 6px 0;
+    height: 35px
+}
+
+.buscador p {
+    font-size: 12px;
+    margin: initial;
+    letter-spacing: -0.035em;
+    color: #fff
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 4px
+}
+
+.tarjeta .col {
+    position: relative
+}
+
+.tarjeta .col h2 {
+    font-size: 16px;
+    color: #005CB9
+}
+
+.tarjeta .col h2 span {
+    font-style: italic;
+    font-weight: lighter;
+    padding-left: 15px
+}
+
+.tarjeta .col p {
+    font-size: 12px
+}
+
+.tarjeta .col .fecha {
+    position: static;
+    top: 0;
+    left: -60px;
+    padding: 6px 10px 12px 10px;
+    width: 55px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    background: #005CB9;
+    color: #ffffff;
+    line-height: 1
+}
+
+.tarjeta .col .fecha .dia {
+    font-size: 24px;
+    font-weight: bold
+}
+
+.tarjeta .col .fecha .mes {
+    font-weight: bold
+}
+
+.botonera {
+    text-align: right
+}
+
+footer {
+    background: #E7E7E7;
+    border: 1px solid #E7E7E7;
+    margin-top: 25px
+}
+
+footer .row {
+    padding: 35px 30px
+}
+
+footer h2 {
+    font-size: 16px;
+    color: #005CB9;
+    font-weight: lighter
+}
+
+footer ul {
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+footer ul li {
+    padding: 5px 0;
+    margin: 0;
+    list-style: none
+}
+
+footer ul li strong {
+    color: #005CB9;
+    font-size: 13px
+}
+
+footer .logo {
+    text-align: right
+}
+
+footer .logo img {
+    width: 161px
+}
+
+.pagination {
+    margin-top: 10px
+}
+
+.pagination .page-item {
+    padding: 5px 10px
+}
+
+.pagination .page-item .page-link {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 22px
+}
+
+.pagination .page-item .page-link:hover {
+    border: 0;
+    background: #235CA8;
+    border-radius: 15px;
+    color: #235CA8;
+    color: #ffffff
+}
+
+.pagination .page-item:first-child .page-link {
+    background: #235CA8;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bolder
+}
+
+.pagination .page-item:first-child .page-link:hover {
+    background: #336AB4;
+    border-radius: 5px;
+    border: 0
+}
+
+.pagination .page-item:first-child.disabled .page-link {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.pagination .page-item:last-child .page-link {
+    background: #235CA8;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bolder
+}
+
+.pagination .page-item:last-child .page-link:hover {
+    background: #336AB4;
+    border-radius: 5px;
+    border: 0
+}
+
+.pagination .page-item.active .page-link {
+    border: 2px solid #235CA8;
+    background: #ffffff;
+    border-radius: 15px;
+    color: #235CA8;
+    line-height: 20px
+}
+
+.btn-primary {
+    background-color: #235CA8;
+    border-color: #235CA8
+}
+
+.btn {
+    font-size: 13px
+}
+
+.interna .main-wrap {
+    background: transparent
+}
+
+.interna .main-wrap h1 {
+    position: static;
+    text-transform: initial;
+    width: 100%;
+    padding-left: 5px;
+    font-size: 16px
+}
+
+.interna .main-wrap .tarjeta {
+    padding: 15px 5px 15px 60px
+}
+
+.interna .main-wrap .tarjeta .detalle {
+    text-align: left
+}
+
+.interna .main-wrap .tarjeta .detalle h3 {
+    font-size: 45px;
+    color: #BFD6ED;
+    position: absolute;
+    right: 12px;
+    top: -80px;
+    display: none
+}
+
+.interna .main-wrap .tarjeta .detalle p {
+    padding-right: 35px;
+    color: #235CA8;
+    background: transparent url(../img/cupos.png) right center no-repeat
+}
+
+.interna .main-wrap .tarjeta .detalle p strong {
+    display: block
+}
+
+.interna .main-wrap .sup {
+    background: #fff;
+    border-radius: 4px 4px 0 0
+}
+
+.interna .main-wrap .inf {
+    background: #E4EDF7;
+    border-radius: 0 0 4px 4px;
+    font-size: 14px;
+    padding: 20px 30px
+}
+
+table.datable {
+    font-size: 12px;
+    color: #005CB9
+}
+
+table.datable thead th {
+    border-bottom: 1px solid #005CB9;
+    border-top: none
+}
+
+table.datable td {
+    font-size: 12px
+}
+
+.interfaz {
+    font-family: 'Open Sans', sans-serif
+}
+
+.interfaz .login {
+    display: grid;
+    min-height: 100vh;
+    width: 100vw;
+    margin-top: -80px;
+    padding: 80px 0 0 0;
+    justify-items: center;
+    align-items: center
+}
+
+.interfaz .login .main-wrap {
+    margin: 0 auto;
+    padding: 0;
+    height: initial;
+    background: transparent;
+    width: 90%;
+    max-width: initial
+}
+
+.interfaz .login .login-block h2 {
+    font-size: 20px;
+    color: #ffffff
+}
+
+.interfaz .login .login-block h3 {
+    font-size: 16px;
+    color: #b4cfea;
+    font-weight: 200
+}
+
+.interfaz .login .login-block label {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 300
+}
+
+.interfaz .login .login-block input {
+    font-size: 14px;
+    border: 0
+}
+
+.interfaz .login .login-block button, input[type="submit"] {
+    font-size: 14px;
+    font-weight: 700;
+    border: 0
+}
+
+.interfaz .login .login-block .form-check .form-check-input {
+    margin-top: .5rem
+}
+
+.interfaz .login .login-block .form-check label {
+    font-size: 12px;
+    font-weight: 400
+}
+
+.interfaz .login .login-block .form-check a {
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #5995d2
+}
+
+.interfaz .login .login-block .form-check a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #fff
+}
+
+.interfaz .login .login-form {
+    max-width: 240px;
+    margin: 0 auto
+}
+
+.interfaz .login .login-form fieldset:nth-child(1) {
+    padding: 35px 0;
+    border-bottom: 1px solid #5995d2
+}
+
+.interfaz .login .login-form fieldset:nth-child(1) button,
+.interfaz .login .login-form fieldset:nth-child(1) input[type="submit"] {
+    background: #B4BF35
+}
+
+.interfaz .login .login-form fieldset:nth-child(2) {
+    padding: 35px 0
+}
+
+.interfaz .login .login-form fieldset:nth-child(2) button,
+.interfaz .login .login-form fieldset:nth-child(2) a{
+    background: #1F9CD8
+}
+
+.interfaz .login .login-form .col-6:nth-child(1) {
+    padding: 0 0 0 15px
+}
+
+.interfaz .login .login-form .col-6:nth-child(2) {
+    padding: 0 15px 0 0
+}
+
+.interfaz .signup {
+    display: grid;
+    min-height: 90vh;
+    width: 90vw;
+    margin: -40px auto 20px auto;
+    padding: 80px 0 0 0;
+    justify-items: center;
+    align-items: center
+}
+
+.interfaz .signup .main-wrap {
+    margin: 0 auto;
+    padding: 40px 30px;
+    border-radius: 8px;
+    height: initial;
+    background: #ffffff;
+    width: 90%;
+    max-width: initial;
+    position: relative
+}
+
+.interfaz .signup .main-wrap h1.light {
+    color: #a6c6e6;
+    top: -25px;
+    left: 30px;
+    font-size: 20px
+}
+
+.interfaz .signup .signup-block h2 {
+    font-size: 20px;
+    color: #005CB9
+}
+
+.interfaz .signup .signup-block h3 {
+    font-size: 16px;
+    color: #b4cfea;
+    font-weight: 200
+}
+
+.interfaz .signup .signup-block label {
+    font-size: 14px;
+    color: #005CB9
+}
+
+.interfaz .signup .signup-block input {
+    font-size: 14px;
+    border: 1px solid #86B7EE
+}
+
+.interfaz .signup .signup-block button {
+    font-size: 14px;
+    font-weight: 700;
+    border: 0
+}
+
+.interfaz .signup .signup-block select {
+    font-size: 14px;
+    color: #86B7EE;
+    border: 1px solid #86B7EE
+}
+
+.interfaz .signup .signup-block ::placeholder {
+    color: #86B7EE
+}
+
+.interfaz .signup .signup-block .terminos {
+    text-align: center
+}
+
+.interfaz .signup .signup-block .form-check .form-check-input {
+    margin-top: .5rem
+}
+
+.interfaz .signup .signup-block .form-check label {
+    font-size: 12px;
+    font-weight: 400
+}
+
+.interfaz .signup .signup-block .form-check a {
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #5995d2
+}
+
+.interfaz .signup .signup-block .form-check a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #fff
+}
+
+.interfaz .signup .signup-form .row {
+    align-items: baseline
+}
+
+.interfaz .signup .signup-form fieldset:nth-child(2) {
+    max-width: 820px;
+    margin: 0 auto;
+    border: 1px solid #005CB9;
+    background: #E4EDF7;
+    padding: 10px 15px 0px 15px;
+    border-radius: 8px;
+    margin-top: 15px
+}
+
+.interfaz .signup .signup-form fieldset:nth-child(2) button,
+.interfaz .signup .signup-form fieldset:nth-child(2) input[type="submit"]{
+    background: #AD1738;
+    line-height: 1.75
+}
+
+.interfaz .signup .signup-form fieldset:nth-child(2) input {
+    border: 1px solid #005CB9
+}
+
+.interfaz .signup .signup-form .col-6:nth-child(1) {
+    padding: 0 0 0 15px
+}
+
+.interfaz .signup .signup-form .col-6:nth-child(2) {
+    padding: 0 15px 0 0
+}
+
+.interfaz .interna .signup {
+    min-height: initial;
+    width: initial
+}
+
+.interfaz .interna .login {
+    min-height: initial;
+    margin-top: initial;
+    padding: 0;
+    width: 100%
+}
+
+.interfaz .interna .login .login-block {
+    width: 100%
+}
+
+.interfaz .interna .login .login-block h2 {
+    color: #005CB9
+}
+
+.interfaz .interna .login .login-block label {
+    color: #005CB9
+}
+
+.interfaz .interna .login .login-block input {
+    border: 1px solid #86B7EE
+}
+
+.interfaz .interna .login .login-block a {
+    color: #005CB9
+}
+
+.interfaz .interna .login .login-block fieldset:nth-child(1) {
+    padding: 0 0 35px 0
+}
+
+.interfaz .interna .login .login-block fieldset:nth-child(1) button {
+    background: #AD1738
+}
+
+.interfaz .interna .login .login-block fieldset:nth-child(2) {
+    padding: 35px 0 0 0
+}
+
+.interfaz .interna .login .login-block fieldset:nth-child(2) h3 {
+    color: #3980C8
+}
+
+.interfaz .interna .main-wrap .tarjeta .align-items-center {
+    align-items: flex-end !important
+}
+
+.interfaz .interna .main-wrap .tarjeta.old .col .fecha {
+    background: #979EA5
+}
+
+.interfaz .interna .main-wrap .tarjeta.inscrito .detalle p {
+    font-size: 16px;
+    font-weight: 700
+}
+
+.interfaz .interna .main-wrap .tarjeta.asistida .detalle p {
+    font-size: 16px;
+    font-weight: 700
+}
+
+.interfaz .interna .main-wrap .tarjeta.no-asistida .detalle p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #AB0033
+}
+
+.interfaz .interna .main-wrap .inf .estrellas {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.interfaz .interna .main-wrap .inf .estrellas li {
+    list-style-type: none;
+    margin: 0;
+    display: inline;
+    padding: 2px
+}
+
+.interfaz .interna .main-wrap .inf .estrellas li a {
+    display: inline-block;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px
+}
+
+.interfaz .interna .main-wrap .inf .estrellas li a.inactive {
+    background: url(../img/estrella-off.png) center center
+}
+
+.interfaz .interna .main-wrap .inf .estrellas li a.active {
+    background: url(../img/estrella-on.png) center center
+}
+
+.interfaz .interna .main-wrap .inf p {
+    color: #005CB9
+}
+
+.interfaz .interna .main-wrap .inf .descargables {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 550px
+}
+
+.interfaz .interna .main-wrap .inf .descargables td {
+    padding: 6px 12px
+}
+
+.interfaz .interna .main-wrap .inf .descargables td a {
+    text-decoration: underline
+}
+
+.interfaz .interna .main-wrap .inf .descargables tr:nth-child(odd) td {
+    background: #c2d7ed
+}
+
+.interfaz .mis-charlas {
+    padding-top: 40px
+}
+
+.interfaz .mis-charlas .main-wrap > .container-full > .row .col-sm-12 {
+    margin: 0;
+    padding: 0
+}
+
+.interfaz .mis-charlas .main-wrap > .container-full > .row .col-sm-12:first-child .tarjeta {
+    border-radius: 8px 8px 0 0
+}
+
+.interfaz .mis-charlas .main-wrap > .container-full > .row .col-sm-12:last-child .tarjeta {
+    border-radius: 0 0 8px 8px;
+    padding-bottom: 80px
+}
+
+.interfaz .mis-charlas .tarjeta {
+    border-radius: 0;
+    padding: 10px 30px 10px 95px
+}
+
+.interfaz .mis-charlas .tarjeta.next {
+    padding: 50px 30px 10px 30px
+}
+
+.interfaz .mis-charlas .tarjeta.past {
+    padding: 50px 30px 10px 30px
+}
+
+.interfaz .mis-charlas .tarjeta.old .col .fecha {
+    background: #979EA5
+}
+
+.interfaz .mis-charlas .tarjeta.failed .col .fecha {
+    background: #d47c96
+}
+
+.interfaz .mis-charlas .title h1 {
+    color: #005CB9;
+    font-size: 22px
+}
+
+.btn.plus {
+    padding: 0.75rem 2.5rem 0.75rem 1.2rem;
+    font-size: 16px;
+    position: relative;
+    background: #1F9CD8;
+    border: 1px solid #1F9CD8
+}
+
+.btn.plus:before {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    content: "+";
+    font-size: 30px;
+    font-weight: 600;
+    color: #97D1ED
+}
+
+.formCarga {
+    padding: 30px 20px 40px 20px
+}
+
+.formCarga h1 {
+    color: #005CB9;
+    font-size: 22px
+}
+
+.formCarga label {
+    font-size: 14px;
+    color: #005CB9
+}
+
+.formCarga input {
+    font-size: 14px;
+    border: 1px solid #86B7EE;
+    padding: 8px;
+    margin-bottom: 4px
+}
+
+.formCarga select {
+    font-size: 14px;
+    border: 1px solid #86B7EE;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    width: 100%
+}
+
+.formCarga button {
+    margin-top: 15px
+}
+
+.formCarga .aviso {
+    font-size: 12px
+}
+
+.inf h2 {
+    font-size: 16px;
+    color: #005CB9
+}
+
+table.asistentes {
+    width: 100%
+}
+
+table tr {
+    border-bottom: 1px solid #C5DAF0
+}
+
+table tr td {
+    font-size: 13px;
+    padding: 8px
+}
+
+table tr td:nth-child(2) {
+    border-left: 1px solid #C5DAF0
+}
+
+table tr:last-child {
+    border: 0
+}
+
+@media (min-width: 576px) {
+    .hero-wrap {
+        display: block
+    }
+}
+
+@media (min-width: 768px) {
+    .tarjeta {
+        padding: 20px 30px 20px 95px
+    }
+
+    .tarjeta .col .fecha {
+        position: absolute
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        align-items: center
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        justify-items: unset;
+        justify-content: flex-end
+    }
+
+    .search-wrap {
+        padding: 15px 45px 15px 15px
+    }
+
+    .main-wrap > .container-full .row .col-sm-12.col-lg-6:nth-child(1) {
+        padding-right: 4px
+    }
+
+    .main-wrap > .container-full .row .col-sm-12.col-lg-6:nth-child(2) {
+        padding-left: 4px
+    }
+
+    footer .row {
+        padding: 35px 70px
+    }
+
+    .interna .main-wrap h1 {
+        width: 50%;
+        padding-left: 40px
+    }
+
+    .interna .main-wrap h1.light {
+        font-size: 26px
+    }
+
+    .interna .main-wrap .tarjeta {
+        padding: 40px 30px 40px 95px
+    }
+
+    .interna .main-wrap .tarjeta .detalle {
+        text-align: right
+    }
+
+    .interna .main-wrap .tarjeta .detalle h3 {
+        display: block
+    }
+}

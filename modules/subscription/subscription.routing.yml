@@ -1,0 +1,7 @@
+subscription.content:
+  path: '/subscription'
+  defaults:
+    _controller: 'Drupal\subscription\Controller\SubscriptionController::content'
+    _title: 'Hello world'
+  requirements:
+    _permission: 'access content'

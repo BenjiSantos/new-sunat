@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a views mini-pager.
+ *
+ * Available variables:
+ * - items: List of pager items.
+ *
+ * @see _mini_pager()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if items.previous or items.next %}
+<div class="row justify-content-end">
+    <div class="col-5">
+      <nav role="navigation" aria-labelledby="pagination-heading">
+            <h4 class="visually-hidden">{{ 'Pagination'|t }}</h4>
+            <ul class="js-pager__items pagination justify-content-end">
+                 <li class="page-item {% if items.previous == false %}disabled{% endif %}">
+                    <a class="page-link" href="{{ items.previous.href }}" tabindex="-1">&larr;</a>
+                 </li>
+                {% if items.current %}
+
+                    <li class="page-item active">
+                        {% trans %}
+                            <a class="page-link" href="">{{ items.current }}</a>
+                        {% endtrans %}
+                    </li>
+                {% endif %}
+                <li class="page-item {% if items.next == false %}disabled{% endif %}">
+                    <a class="page-link" href="{{ items.next.href }}">&rarr;</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endif %}
